@@ -5,22 +5,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Indian Cooking Course: Techniques – Masterclasses | PunjabiPride.ca</title>
-  <meta name="description" content="In-depth review of Monisha Bharadwaj’s 'The Indian Cooking Course: Techniques – Masterclasses'. Discover techniques, masterclasses, and 300+ authentic recipes to elevate your Indian cooking." />
-  <meta name="keywords" content="The Indian Cooking Course, Monisha Bharadwaj, Indian cooking techniques, cookbook review, Punjabi cooking" />
+  <meta name="description" content="A concise, in-depth review of Monisha Bharadwaj’s ‘The Indian Cooking Course: Techniques – Masterclasses.’ Discover key techniques, masterclasses, and over 300 authentic recipes." />
+  <meta name="keywords" content="Indian Cooking Course review, Monisha Bharadwaj, Indian cooking techniques, cookbook, PunjabiPride" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="The Indian Cooking Course: Techniques – Masterclasses | PunjabiPride.ca" />
-  <meta property="og:description" content="Comprehensive review of Monisha Bharadwaj’s ‘The Indian Cooking Course’. Learn about techniques, masterclasses, and 300+ recipes for authentic Indian cuisine." />
-  <meta property="og:image" content="https://punjabipride.ca/images/the-indian-cooking-course-cover.jpg" />
+  <meta property="og:description" content="A concise, in-depth review of Monisha Bharadwaj’s ‘The Indian Cooking Course: Techniques – Masterclasses.’ Over 300 recipes, 40 masterclasses, and essential tips." />
+  <meta property="og:image" content="https://punjabipride.ca/images/indianfood1.jpg" />
   <meta property="og:url" content="https://punjabipride.ca/the-indian-cooking-course.html" />
   <meta property="og:type" content="article" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Indian Cooking Course: Techniques – Masterclasses | PunjabiPride.ca" />
-  <meta name="twitter:description" content="Dive into Monisha Bharadwaj’s ‘The Indian Cooking Course’. Explore techniques, masterclasses, and 300+ recipes to master authentic Indian dishes." />
-  <meta name="twitter:image" content="https://punjabipride.ca/images/the-indian-cooking-course-cover.jpg" />
+  <meta name="twitter:description" content="Dive into Monisha Bharadwaj’s ‘The Indian Cooking Course’: 300+ recipes, 40 masterclasses, and techniques to elevate your Indian cooking." />
+  <meta name="twitter:image" content="https://punjabipride.ca/images/indianfood1.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -31,8 +31,8 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "The Indian Cooking Course: Techniques – Masterclasses",
-    "description": "An in-depth review of Monisha Bharadwaj’s comprehensive guide to Indian cooking techniques, masterclasses, and 300+ authentic recipes.",
-    "image": "https://punjabipride.ca/images/the-indian-cooking-course-cover.jpg",
+    "description": "A concise, in-depth review of Monisha Bharadwaj’s ‘The Indian Cooking Course: Techniques – Masterclasses.’",
+    "image": "https://punjabipride.ca/images/indianfood1.jpg",
     "author": {
       "@type": "Person",
       "name": "PunjabiPride.ca"
@@ -53,7 +53,7 @@
   }
   </script>
 
-  <!-- Inline CSS for Background & Layout (same as other pages) -->
+  <!-- Inline CSS for Clean UI/UX -->
   <style>
     :root {
       --brand-orange: #ff9933;
@@ -61,8 +61,9 @@
       --brand-white: #ffffff;
       --text-dark: #1a1a1a;
       --text-light: #fafafa;
-      --max-width: 1200px;
-      --transition-speed: 0.3s;
+      --max-width: 1000px;
+      --transition-speed: 0.25s;
+      --bg-overlay: rgba(255, 255, 255, 0.95);
     }
     * {
       box-sizing: border-box;
@@ -72,16 +73,12 @@
     html, body {
       height: 100%;
       font-family: 'Poppins', sans-serif;
-    }
-    body {
-      margin: 0;
-      background: url('newback.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: #f7f7f7;
       color: var(--text-dark);
       line-height: 1.6;
     }
     a {
-      color: inherit;
+      color: var(--brand-blue);
       text-decoration: none;
       transition: color var(--transition-speed) ease-in-out;
     }
@@ -91,15 +88,15 @@
     img {
       max-width: 100%;
       height: auto;
-      display: block;
+      border-radius: 6px;
     }
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: var(--brand-blue);
       z-index: 999;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     }
     .container {
       max-width: var(--max-width);
@@ -110,19 +107,19 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 70px;
+      height: 60px;
     }
     .logo {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--brand-white);
     }
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
     .nav-links a {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 500;
       color: var(--brand-white);
     }
@@ -132,62 +129,92 @@
     /* Hero Section */
     .hero {
       position: relative;
-      height: 50vh;
+      height: 40vh;
+      background: url('images/indianfood1.jpg') no-repeat center center;
+      background-size: cover;
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding-top: 70px;
+      margin-top: 60px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: var(--bg-overlay);
     }
     .hero-content {
       position: relative;
+      text-align: center;
       max-width: 700px;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.9);
-      border-radius: 8px;
-      z-index: 1;
+      padding: 1rem 2rem;
     }
     .hero h1 {
       font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: var(--text-dark);
-      font-weight: 700;
+      color: var(--brand-blue);
+      margin-bottom: 0.5rem;
     }
     .hero p {
       font-size: 1rem;
-      margin-bottom: 1.5rem;
       color: var(--text-dark);
     }
     main {
-      padding: 4rem 1rem;
-      margin-top: 0;
-      z-index: 1;
+      padding: 3rem 1rem;
+      margin-top: -60px;
     }
-    .section {
-      max-width: var(--max-width);
-      margin: 0 auto 4rem auto;
-      background: rgba(255, 255, 255, 0.95);
-      padding: 2rem;
+    .article {
+      background: var(--bg-overlay);
       border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
     }
-    .section-heading {
+    .article-header {
+      padding: 2rem 2rem 1rem 2rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .article-title {
       font-size: 2rem;
-      text-align: center;
-      margin-bottom: 1.5rem;
       color: var(--brand-blue);
-      font-weight: 600;
-    }
-    .intro-text {
-      font-size: 1rem;
+      margin-bottom: 0.5rem;
       text-align: center;
-      color: #555555;
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
     }
-    .content img {
-      margin: 2rem auto;
-      display: block;
-      border-radius: 8px;
+    .article-subtitle {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .article-content {
+      padding: 1rem 2rem 2rem 2rem;
+    }
+    .article-content h2 {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      color: var(--brand-blue);
+    }
+    .article-content p {
+      margin: 0.75rem 0;
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+    .article-content ul {
+      margin: 0.5rem 0 0.5rem 1.25rem;
+    }
+    .article-content ul li {
+      margin-bottom: 0.5rem;
+    }
+    .inline-images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+    }
+    .inline-images img {
+      flex: 1 1 300px;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .buy-button {
       display: inline-block;
@@ -196,8 +223,9 @@
       color: var(--brand-white);
       border-radius: 4px;
       font-weight: 600;
+      text-align: center;
       transition: background-color var(--transition-speed);
-      margin-top: 1rem;
+      margin: 1.5rem 0;
     }
     .buy-button:hover {
       background-color: #e68a00;
@@ -206,6 +234,7 @@
       background-color: var(--brand-blue);
       color: var(--brand-white);
       padding: 2rem 1rem;
+      margin-top: 2rem;
     }
     .footer-container {
       display: flex;
@@ -245,19 +274,20 @@
         font-size: 2rem;
       }
       .hero p {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
-      .section-heading {
-        font-size: 1.75rem;
+      .article-content h2 {
+        font-size: 1.25rem;
       }
-      .section {
-        margin: 0 auto 2rem auto;
-        padding: 1.5rem;
+      .buy-button {
+        width: 100%;
+        text-align: center;
       }
     }
   </style>
 </head>
 <body>
+
   <!-- Header & Navigation -->
   <header>
     <div class="container">
@@ -281,77 +311,88 @@
     </div>
   </section>
 
-  <!-- Main Content: Article -->
-  <main>
-    <section class="section">
-      <h2 class="section-heading">In-Depth Review: The Indian Cooking Course</h2>
-      <p class="intro-text">
-        Monisha Bharadwaj’s <strong>The Indian Cooking Course: Techniques – Masterclasses</strong> is an authoritative guide covering over 300 recipes, 40 step-by-step masterclasses, and comprehensive techniques to help both beginners and experienced cooks master authentic Indian cuisine. With vivid photography and detailed explanations, it goes beyond mere recipes—offering cultural context, insights into regional traditions, and healthy cooking principles rooted in Ayurveda. :contentReference[oaicite:1]{index=1}
-      </p>
+  <!-- Main Article -->
+  <main class="container">
+    <article class="article">
 
-      <div class="content">
-        <h3>About the Author</h3>
-        <p>
-          Monisha Bharadwaj is an award-winning author, television personality, and chef. She regularly contributes to food magazines, appears on UK television and radio (including BBC’s Food and Drink and ITV’s Inside the Factory), and runs the Cooking With Monisha cookery school in London. Her extensive experience ensures that each technique is presented clearly, with precise tips on spice blending, ingredient selection, and cooking methods. :contentReference[oaicite:2]{index=2}
-        </p>
+      <!-- Article Header -->
+      <div class="article-header">
+        <h1 class="article-title">In-Depth Review:<br>The Indian Cooking Course</h1>
+        <p class="article-subtitle">A concise look at Monisha Bharadwaj’s guide to mastering authentic Indian cuisine.</p>
+      </div>
 
-        <h3>Book Structure & Key Features</h3>
-        <p>
-          Released in 2016, this 496-page hardcover is divided into thematic chapters focused on:
-        </p>
+      <!-- Article Body -->
+      <div class="article-content">
+        <!-- Intro -->
+        <p>Monisha Bharadwaj’s <strong>The Indian Cooking Course: Techniques – Masterclasses</strong> is a step-by-step roadmap to over 300 recipes and 40 hands-on tutorials. Whether you’re a complete beginner or an experienced home cook, this 496-page volume demystifies Indian techniques, spices, and regional flavours with clear instructions, vivid photography, and a healthy Ayurvedic angle.</p>
+
+        <!-- Inline Images -->
+        <div class="inline-images">
+          <img src="images/indianfood1.jpg" alt="Rich Indian curry with fresh cilantro (indianfood1.jpg)">
+          <img src="images/indianfood2.jpg" alt="Creamy curry served with naan bread (indianfood2.jpg)">
+        </div>
+
+        <!-- About the Author -->
+        <h2>About the Author</h2>
+        <p>Monisha Bharadwaj is an award-winning chef, TV personality, and founder of the Cooking With Monisha cookery school in London. You may recognize her from BBC’s <em>Food and Drink</em> or ITV’s <em>Inside the Factory</em>. She knows exactly how to break down each step—spice blending, ingredient prep, temperature control—so you never feel lost in the kitchen.</p>
+
+        <!-- Book Structure & Key Features -->
+        <h2>Book Structure &amp; Key Features</h2>
+        <p>Published in 2016, this hardcover volume is divided into six core sections. Each chapter features:</p>
         <ul>
-          <li><strong>Rice, Flours & Breads:</strong> Learn to prepare perfect rice every time, create various flours, and master flatbreads such as chapatis and parathas.</li>
-          <li><strong>Meat, Poultry & Seafood:</strong> Understand marinating techniques, grilling methods, and how to cook meats to tender perfection.</li>
-          <li><strong>Lentils, Beans & Vegetables:</strong> Explore hearty dals, vegetable curries, and healthy side dishes reflecting India’s regional diversity.</li>
-          <li><strong>Snacks, Street Foods & Sides:</strong> Step-by-step masterclasses on favorites like samosas, pakoras, and chaat, complete with assembly tips.</li>
-          <li><strong>Chutneys, Pickles & Relishes:</strong> Craft flavorful condiments and accompaniments that elevate each meal.</li>
-          <li><strong>Desserts & Drinks:</strong> From classic gulab jamun to cooling lassis, learn how to balance flavors and textures in traditional sweet dishes.</li>
+          <li><strong>Rice, Flours &amp; Breads:</strong> Perfect basmati rice, homemade flours, and rolling flawless chapatis or parathas.</li>
+          <li><strong>Meat, Poultry &amp; Seafood:</strong> Marinades, grilling techniques, and foolproof cooking methods for tender, flavourful proteins.</li>
+          <li><strong>Lentils, Beans &amp; Vegetables:</strong> Hearty dals, vibrant curries, and seasonal veggie dishes reflecting regional diversity.</li>
+          <li><strong>Snacks, Street Foods &amp; Sides:</strong> Step-by-step tutorials for samosas, pakoras, chaat, and other crowd-pleasers with plating tips.</li>
+          <li><strong>Chutneys, Pickles &amp; Relishes:</strong> Flavor-packed condiments that turn any meal into a feast.</li>
+          <li><strong>Desserts &amp; Drinks:</strong> Balancing sweetness and texture—from gulab jamun to cooling lassis.</li>
         </ul>
-        <p>
-          Each chapter features vivid, full-color photographs and detailed instructions to demystify complex techniques, making it accessible even if you’ve never cooked Indian food before. :contentReference[oaicite:3]{index=3}
-        </p>
+        <p>Every recipe is accompanied by full-color photography and sidebars explaining spice origins, Ayurvedic benefits, and alternative ingredient suggestions.</p>
 
-        <h3>Why It Stands Out</h3>
-        <p>
-          - <strong>Masterclasses:</strong> Over 40 hands-on tutorials (e.g., rolling perfectly shaped chapatis, frying crisp samosas, making silky-smooth chutneys).<br>
-          - <strong>Ingredient Deep-Dives:</strong> Detailed explanations of staple spices, oils, and produce—plus tips on selecting and storing them.<br>
-          - <strong>Regional Insights:</strong> Vivid coverage of how North Indian lentil dishes differ from South Indian coconut-based curries, contextualizing each recipe within its cultural backdrop. :contentReference[oaicite:4]{index=4}
-        </p>
+        <!-- Why It Stands Out -->
+        <h2>Why It Stands Out</h2>
+        <ul>
+          <li><strong>40+ Masterclasses:</strong> Hands-on tutorials like rolling perfect chapatis, frying crisp samosas, and whisking silky chutneys.</li>
+          <li><strong>Ingredient Deep-Dive:</strong> Comprehensive spice guides, oil recommendations, and tips on sourcing fresh produce.</li>
+          <li><strong>Regional Context:</strong> North vs South—how a Tamil Nadu coconut curry differs from a Punjabi dal, with cultural anecdotes woven in.</li>
+        </ul>
 
-        <h3>Pros & Cons</h3>
+        <!-- Pros & Cons -->
+        <h2>Pros &amp; Cons</h2>
         <p><strong>Pros:</strong></p>
         <ul>
-          <li>Comprehensive scope—spans all major categories of Indian cooking.</li>
-          <li>High-quality photography makes each step clear and inspiring.</li>
-          <li>Strong focus on healthy cooking principles with Ayurvedic influence.</li>
+          <li>Encyclopedic: Covers every corner of Indian home cooking in one volume.</li>
+          <li>Visual Learning: High-quality photos make each step easy to follow.</li>
+          <li>Health-Focused: Integrates Ayurvedic principles and wholesome ingredients.</li>
         </ul>
         <p><strong>Cons:</strong></p>
         <ul>
-          <li>Large hardcover can be heavy; not ideal for counter use.</li>
-          <li>Some recipes use specialized ingredients that may require sourcing online.</li>
+          <li>Weight &amp; Size: The 496-page hardcover can be hefty; not ideal for kitchen counters unless you have a stand.</li>
+          <li>Specialty Ingredients: A few recipes call for ingredients that aren’t in every grocery store (though substitutes are suggested).</li>
         </ul>
 
-        <h3>Who Should Read It?</h3>
-        <p>
-          - <strong>Home cooks</strong> eager to deepen their understanding of Indian techniques.<br>
-          - <strong>Food enthusiasts</strong> looking to explore regional Indian flavors and learn from a seasoned instructor.<br>
-          - <strong>Experienced chefs</strong> wanting a reference that ties cultural context to culinary techniques.
-        </p>
+        <!-- Who Should Read It -->
+        <h2>Who Should Read It?</h2>
+        <ul>
+          <li><strong>Beginners:</strong> Anyone new to Indian cooking who needs detailed, foolproof guidance.</li>
+          <li><strong>Home Chefs:</strong> Cooks wanting to level up with authentic regional techniques.</li>
+          <li><strong>Food Enthusiasts:</strong> Readers curious about cultural context, health benefits, and visual storytelling.</li>
+        </ul>
 
-        <h3>Affiliate Link & Where to Buy</h3>
-        <p>
-          Ready to take your Indian cooking to the next level? Purchase <em>The Indian Cooking Course: Techniques – Masterclasses</em> through our affiliate link below. Each purchase supports PunjabiPride.ca at no extra cost to you.
-        </p>
-        <p style="text-align: center;">
-          <a href="https://amzn.to/4dOgHJ7" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a>
-        </p>
+        <!-- Affiliate Call-to-Action -->
+        <h2>Get Your Copy</h2>
+        <p>If you’re ready to transform your kitchen game, grab <em>The Indian Cooking Course: Techniques – Masterclasses</em> through our affiliate link below. Every purchase supports PunjabiPride.ca at no extra cost to you.</p>
+        <div style="text-align: center;">
+          <a href="https://amzn.to/4dOgHJ7" target="_blank" rel="noopener" class="buy-button">
+            ▶️ Buy on Amazon
+          </a>
+        </div>
 
-        <h3>Final Thoughts</h3>
-        <p>
-          Monisha Bharadwaj’s <em>The Indian Cooking Course</em> is more than just a cookbook; it’s a culinary education. Whether you’ve never cooked Indian food or you’re seeking to refine your technique, this volume will remain a staple on your shelf for years to come. Its blend of visual guidance, cultural context, and nutritional mindfulness makes it a standout resource. :contentReference[oaicite:5]{index=5}
-        </p>
+        <!-- Conclusion -->
+        <h2>Final Thoughts</h2>
+        <p>Monisha Bharadwaj has crafted more than a cookbook—this is a kitchen companion built on clarity, culture, and healthy cooking principles. If you want to move beyond “follow a recipe” and truly understand the “why” behind each technique, this book belongs on your shelf.</p>
       </div>
-    </section>
+    </article>
   </main>
 
   <!-- Footer -->
@@ -368,7 +409,7 @@
       </div>
       <div class="footer-column">
         <h4>About Us</h4>
-        <p>PunjabiPride.ca is dedicated to showcasing Punjabi-Canadian culinary heritage through expert reviews and affiliate-supported recommendations.</p>
+        <p>PunjabiPride.ca celebrates Punjabi-Canadian culinary traditions through expert reviews and affiliate-supported recommendations.</p>
       </div>
       <div class="footer-column">
         <h4>Follow Us</h4>
@@ -383,5 +424,6 @@
       &copy; 2025 PunjabiPride.ca. All Rights Reserved.
     </div>
   </footer>
+
 </body>
 </html>
