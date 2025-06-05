@@ -21,7 +21,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cookbook Blog – PunjabiPride.ca" />
-  <meta name="twitter:description" content="Explore top Punjabi cookbooks handpicked for authenticity, quality, and flavor. Purchase via our affiliate links." />
+  <meta name="twitter:description" content="Explore top Punjabi cookbooks handpicked for authenticity, quality, and flavor. Purchase via affiliate links." />
   <meta name="twitter:image" content="https://punjabipride.ca/images/og-image.jpg" />
 
   <!-- Favicon -->
@@ -67,7 +67,6 @@
 
     body {
       margin: 0;
-      /* Full-page background image: newback.jpg */
       background: url('newback.jpg') no-repeat center center fixed;
       background-size: cover;
       color: var(--text-dark);
@@ -95,7 +94,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.5); /* slight dark bar for readability */
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
@@ -142,7 +141,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding-top: 70px; /* account for fixed header */
+      padding-top: 70px;
     }
 
     .hero-content {
@@ -170,7 +169,7 @@
     /* Main Content */
     main {
       padding: 4rem 1rem;
-      margin-top: 0; /* no overlap – hero is shorter */
+      margin-top: 0;
       z-index: 1;
     }
 
@@ -244,10 +243,27 @@
       font-weight: 600;
       text-decoration: none;
       transition: background-color var(--transition-speed);
+      margin-right: 0.5rem;
     }
 
     .buy-button:hover {
       background-color: #e68a00;
+    }
+
+    .read-more-button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--brand-blue);
+      color: var(--brand-white);
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color var(--transition-speed);
+      margin-top: 0.5rem;
+    }
+
+    .read-more-button:hover {
+      background-color: #003366;
     }
 
     /* Footer */
@@ -298,7 +314,6 @@
       color: #d0d0d0;
     }
 
-    /* Responsive Typography */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
@@ -344,7 +359,7 @@
   <main>
     <section class="section" id="cookbooks">
       <h2 class="section-heading">Top Punjabi Cookbooks</h2>
-      <p class="intro-text">Explore our curated collection of must-have Punjabi cookbooks. Click any “Buy on Amazon” button to purchase through our affiliate links.</p>
+      <p class="intro-text">Explore our curated collection of must-have Punjabi cookbooks. Click any “Buy on Amazon” button to purchase through our affiliate links, or “Read Review” for an in-depth analysis.</p>
       <div class="product-grid">
         <!-- 1. Punjabi Style Recipes -->
         <div class="product-card">
@@ -352,7 +367,9 @@
             <h3>Punjabi Style Recipes: A Complete Cookbook of Northern India Dish Ideas!</h3>
             <p><strong>Author:</strong> Barbara Riddle</p>
             <p>This highly rated cookbook delivers authentic Northern Indian recipes, from Butter Chicken to Aloo Paratha, complete with step-by-step photos.</p>
-            <p><a href="https://amzn.to/4kVxVaa" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
+            <p>
+              <a href="https://amzn.to/4kVxVaa" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a>
+            </p>
           </div>
         </div>
 
@@ -362,7 +379,9 @@
             <h3>The Punjabi Cookbook: 50+ Spicy and Aromatic Punjabi Recipes</h3>
             <p><strong>Author:</strong> Rachael Rayner</p>
             <p>Featuring over 50 signature Punjabi dishes, this book is perfect for home chefs wanting to master Dal Tadka, Rajma, and Chole.</p>
-            <p><a href="https://amzn.to/3SySxsz" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
+            <p>
+              <a href="https://amzn.to/3SySxsz" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a>
+            </p>
           </div>
         </div>
 
@@ -372,7 +391,9 @@
             <h3>Punjabi Cookbook – A Culinary Journey through the Heart of Punjabi</h3>
             <p><strong>Author:</strong> Simran Bajwa</p>
             <p>A beautifully illustrated cookbook overflowing with authentic Punjabi family recipes that bring traditional flavors to life.</p>
-            <p><a href="https://amzn.to/4mMh2Af" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
+            <p>
+              <a href="https://amzn.to/4mMh2Af" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a>
+            </p>
           </div>
         </div>
 
@@ -382,7 +403,10 @@
             <h3>The Indian Cooking Course: Techniques – Masterclasses</h3>
             <p><strong>Author:</strong> Monisha Bharadwaj</p>
             <p>More than just Punjabi recipes, this book covers essential techniques including Tandoori and Punjabi dishes—perfect for serious home chefs.</p>
-            <p><a href="https://amzn.to/4dOgHJ7" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
+            <p>
+              <a href="https://amzn.to/4dOgHJ7" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a>
+              <a href="the-indian-cooking-course.html" class="read-more-button">▶️ Read Review</a>
+            </p>
           </div>
         </div>
       </div>
