@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Contact Us – PunjabiPride.ca</title>
+  <meta name="description" content="Get in touch with PunjabiPride.ca. Have questions about Punjabi cookbooks or cookware? Send us a message through our contact form!" />
+  <meta name="keywords" content="Contact PunjabiPride, Punjabi cookbook questions, Punjabi cookware questions, Punjabi cooking blog contact" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Contact Us – PunjabiPride.ca" />
+  <meta property="og:description" content="Get in touch with PunjabiPride.ca. Have questions about Punjabi cookbooks or cookware? Send us a message through our contact form!" />
+  <meta property="og:image" content="https://punjabipride.ca/images/og-contact.jpg" />
+  <meta property="og:url" content="https://punjabipride.ca/contact.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Us – PunjabiPride.ca" />
+  <meta name="twitter:description" content="Get in touch with PunjabiPride.ca. Have questions about Punjabi cookbooks or cookware? Send us a message through our contact form!" />
+  <meta name="twitter:image" content="https://punjabipride.ca/images/og-contact.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Inline CSS (Consistent with other pages) -->
+  <style>
+    :root {
+      --brand-orange: #ff9933;
+      --brand-blue: #0055a4;
+      --brand-white: #ffffff;
+      --text-dark: #1a1a1a;
+      --text-light: #fafafa;
+      --overlay-bg: rgba(0, 0, 0, 0.5);
+      --max-width: 1200px;
+      --transition-speed: 0.3s;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      position: relative;
+      margin: 0;
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-speed) ease-in-out;
+    }
+
+    a:hover {
+      color: var(--brand-orange);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--overlay-bg);
+      z-index: 999;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .logo {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--brand-white);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--brand-white);
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-orange);
+    }
+
+    /* Overlay over background */
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: var(--overlay-bg);
+      z-index: 0;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 70px; /* account for fixed header */
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 700px;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    /* Main Content */
+    main {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 4rem 1rem;
+      margin-top: -60vh; /* Overlap hero */
+      z-index: 1;
+    }
+
+    .section {
+      max-width: var(--max-width);
+      margin: 0 auto 4rem auto;
+    }
+
+    .section-heading {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--brand-blue);
+      font-weight: 600;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      text-align: center;
+      color: #555555;
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: var(--brand-white);
+      padding: 2rem;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--brand-blue);
+      font-weight: 600;
+    }
+
+    .contact-form p {
+      margin-bottom: 1rem;
+      color: #555555;
+      font-size: 1rem;
+    }
+
+    .contact-form label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .contact-form input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    .contact-form button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--brand-orange);
+      color: var(--brand-white);
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color var(--transition-speed);
+    }
+
+    .contact-form button:hover {
+      background-color: #e68a00;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--brand-blue);
+      color: var(--brand-white);
+      padding: 2rem 1rem;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1 1 200px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-column ul {
+      list-style: none;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-column ul li a {
+      color: var(--text-light);
+      transition: color var(--transition-speed);
+    }
+
+    .footer-column ul li a:hover {
+      color: var(--brand-orange);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #d0d0d0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 0.9rem;
+      }
+      .section-heading {
+        font-size: 1.75rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo">PunjabiPride.ca</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="cookbook-blog.html">Cookbook Blog</a>
+          <a href="cookware-blog.html">Cookware Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Contact Us</h1>
+      <p>Have questions or feedback? Fill out the form below and we’ll get back to you shortly.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <section class="section">
+      <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <!-- Netlify Form -->
+        <form name="contact" netlify>
+          <p>
+            <label>Name<br />
+              <input type="text" name="name" required />
+            </label>
+          </p>
+          <p>
+            <label>Email<br />
+              <input type="email" name="email" required />
+            </label>
+          </p>
+          <p>
+            <label>Message<br />
+              <textarea name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid #cccccc; border-radius: 4px; font-size: 1rem;"></textarea>
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send Message</button>
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-container">
+      <!-- Column: Quick Links -->
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cookbook-blog.html">Cookbook Blog</a></li>
+          <li><a href="cookware-blog.html">Cookware Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column: About Us -->
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <p>PunjabiPride.ca is dedicated to showcasing Punjabi culinary traditions through trusted book and cookware recommendations. Purchase via our affiliate links to support our mission.</p>
+      </div>
+
+      <!-- Column: Social Media -->
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/punjabipride" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/punjabipride" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.youtube.com/punjabipride" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 PunjabiPride.ca. All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>
