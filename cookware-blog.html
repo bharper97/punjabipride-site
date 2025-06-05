@@ -7,22 +7,22 @@
 
   <!-- SEO Meta Tags -->
   <title>Cookware Blog – PunjabiPride.ca</title>
-  <meta name="description" content="Dive into the Cookware Blog at PunjabiPride.ca for expert reviews of traditional Punjabi cookware. Learn which kadai, pressure cooker, and spice container are must-haves for your kitchen." />
-  <meta name="keywords" content="Punjabi cookware blog, cookware reviews, Punjabi kitchen tools, kadai review, pressure cooker review, masala dabba, brass kadai, Hawkins pressure cooker, Zap Impex karahi" />
+  <meta name="description" content="PunjabiPride.ca Cookware Blog – Discover top must-have Punjabi cookware and kitchen tools. Purchase via our affiliate links." />
+  <meta name="keywords" content="Punjabi cookware, P-TAL Kadhai, Zap Impex karahi, Hawkins pressure cooker, KSJONE masala dabba" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="Cookware Blog – PunjabiPride.ca" />
-  <meta property="og:description" content="Expert reviews of traditional Punjabi cookware. Find out which kadai, pressure cooker, and masala dabba to add to your kitchen." />
-  <meta property="og:image" content="https://punjabipride.ca/images/og-cookware.jpg" />
+  <meta property="og:description" content="Discover top must-have Punjabi cookware and kitchen tools. Purchase via our affiliate links." />
+  <meta property="og:image" content="https://punjabipride.ca/images/og-image.jpg" />
   <meta property="og:url" content="https://punjabipride.ca/cookware-blog.html" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cookware Blog – PunjabiPride.ca" />
-  <meta name="twitter:description" content="Expert reviews of traditional Punjabi cookware. Find out which kadai, pressure cooker, and masala dabba to add to your kitchen." />
-  <meta name="twitter:image" content="https://punjabipride.ca/images/og-cookware.jpg" />
+  <meta name="twitter:description" content="Discover top must-have Punjabi cookware and kitchen tools. Purchase via our affiliate links." />
+  <meta name="twitter:image" content="https://punjabipride.ca/images/og-image.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -31,7 +31,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Inline CSS (Same as other pages) -->
+  <!-- JSON-LD for WebPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cookware Blog – PunjabiPride.ca",
+    "url": "https://punjabipride.ca/cookware-blog.html",
+    "description": "Discover top must-have Punjabi cookware and kitchen tools. Purchase via our affiliate links."
+  }
+  </script>
+
+  <!-- Inline CSS for Background & Layout -->
   <style>
     :root {
       --brand-orange: #ff9933;
@@ -39,7 +50,6 @@
       --brand-white: #ffffff;
       --text-dark: #1a1a1a;
       --text-light: #fafafa;
-      --overlay-bg: rgba(0, 0, 0, 0.5);
       --max-width: 1200px;
       --transition-speed: 0.3s;
     }
@@ -56,9 +66,9 @@
     }
 
     body {
-      position: relative;
       margin: 0;
-      background: url('background.jpg') no-repeat center center fixed;
+      /* Full-page background image: newback.jpg */
+      background: url('newback.jpg') no-repeat center center fixed;
       background-size: cover;
       color: var(--text-dark);
       line-height: 1.6;
@@ -80,11 +90,12 @@
       display: block;
     }
 
+    /* Fixed Header */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--overlay-bg);
+      background-color: rgba(0, 0, 0, 0.5); /* slight dark bar for readability */
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
@@ -123,14 +134,7 @@
       color: var(--brand-orange);
     }
 
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: var(--overlay-bg);
-      z-index: 0;
-    }
-
+    /* Hero Section */
     .hero {
       position: relative;
       height: 60vh;
@@ -138,8 +142,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding-top: 70px;
-      z-index: 1;
+      padding-top: 70px; /* account for fixed header */
     }
 
     .hero-content {
@@ -148,6 +151,7 @@
       padding: 2rem;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -159,21 +163,23 @@
 
     .hero p {
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: var(--text-dark);
     }
 
+    /* Main Content */
     main {
-      position: relative;
-      background-color: rgba(255, 255, 255, 0.95);
       padding: 4rem 1rem;
-      margin-top: -60vh;
+      margin-top: 0; /* no overlap – hero is shorter */
       z-index: 1;
     }
 
     .section {
       max-width: var(--max-width);
       margin: 0 auto 4rem auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 8px;
     }
 
     .section-heading {
@@ -192,68 +198,59 @@
       margin: 0 auto 2rem auto;
     }
 
-    .post-list {
-      display: flex;
-      flex-direction: column;
+    .product-grid {
+      display: grid;
       gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .post-card {
+    .product-card {
       background-color: var(--brand-white);
       border: 1px solid #e0e0e0;
       border-radius: 6px;
       overflow: hidden;
-      display: flex;
-      flex-wrap: wrap;
       transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
     }
 
-    .post-card:hover {
+    .product-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .post-image {
-      flex: 1 1 280px;
-      max-height: 200px;
-      overflow: hidden;
-    }
-
-    .post-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .post-content {
-      flex: 2 1 380px;
+    .product-card-content {
       padding: 1rem;
     }
 
-    .post-content h3 {
-      font-size: 1.5rem;
+    .product-card-content h3 {
+      font-size: 1.25rem;
       margin-bottom: 0.5rem;
       color: var(--text-dark);
       font-weight: 600;
     }
 
-    .post-content p {
+    .product-card-content p {
       font-size: 0.95rem;
       margin-bottom: 1rem;
       color: #666666;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
-    .read-more {
-      font-weight: 500;
-      color: var(--brand-orange);
-      transition: color var(--transition-speed);
+    .buy-button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--brand-orange);
+      color: var(--brand-white);
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color var(--transition-speed);
     }
 
-    .read-more:hover {
-      color: #e68a00;
+    .buy-button:hover {
+      background-color: #e68a00;
     }
 
+    /* Footer */
     footer {
       background-color: var(--brand-blue);
       color: var(--brand-white);
@@ -301,29 +298,25 @@
       color: #d0d0d0;
     }
 
+    /* Responsive Typography */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
       }
       .hero p {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       .section-heading {
         font-size: 1.75rem;
       }
-      .post-card {
-        flex-direction: column;
-      }
-      .post-image,
-      .post-content {
-        flex: 1 1 100%;
+      .section {
+        margin: 0 auto 2rem auto;
+        padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
-
   <!-- Header & Navigation -->
   <header>
     <div class="container">
@@ -343,68 +336,49 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Cookware Blog</h1>
-      <p>Expert reviews and deep dives into traditional Punjabi cookware. Learn which kadais, pressure cookers, and spice containers earn a spot in your kitchen.</p>
+      <p>Discover must-have Punjabi cookware handpicked for authenticity, durability, and style.</p>
     </div>
   </section>
 
-  <!-- Main Content -->
+  <!-- Main Content: Cookware List -->
   <main>
-    <!-- Introduction -->
-    <section class="section">
-      <h2 class="section-heading">Welcome to Our Cookware Blog</h2>
-      <p class="intro-text">
-        Whether you need the perfect brass kadhai, a reliable Hawkins pressure cooker, or a beautiful masala dabba, our Cookware Blog will guide you with honest reviews, usage tips, and cultural insights. Let’s equip your Punjabi kitchen with tools built for authentic cooking.
-      </p>
-    </section>
-
-    <!-- List of Cookware Blog Posts -->
-    <section class="section">
-      <div class="post-list">
-        <!-- Post Card #1 -->
-        <div class="post-card" id="post1">
-          <div class="post-image">
-            <img src="images/cookware-post-1.jpg" alt="Review: P-TAL Brass Kadhai 1.5L" />
-          </div>
-          <div class="post-content">
-            <h3>Review: P-TAL Brass Kadhai 1.5L</h3>
-            <p>Find out why the P-TAL Brass Kadhai is a must-have for Punjabi cooking. We test its heat distribution, durability, and ease of cleaning when making pakoras and curries.</p>
-            <a href="https://amzn.to/45E5gSj" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+    <section class="section" id="cookware">
+      <h2 class="section-heading">Must-Have Punjabi Cookware</h2>
+      <p class="intro-text">Explore our curated selection of essential Punjabi cookware. Click “Buy on Amazon” to purchase via affiliate links.</p>
+      <div class="product-grid">
+        <!-- 1. P-TAL Brass Kadhai -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>P-TAL Brass Kadhai 1.5L with Insulated Heat-Resistant Handle & Glass Lid</h3>
+            <p>This 1.5L brass kadhai is perfect for frying pakoras, simmering curries, and delivering true Punjabi flavors with even heat distribution.</p>
+            <p><a href="https://amzn.to/45E5gSj" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
 
-        <!-- Post Card #2 -->
-        <div class="post-card" id="post2">
-          <div class="post-image">
-            <img src="images/cookware-post-2.jpg" alt="Overview: Zap Impex Indian Serving Bowl" />
-          </div>
-          <div class="post-content">
-            <h3>Overview: Zap Impex Indian Serving Bowl</h3>
-            <p>Learn how this hammered copper and stainless steel karahi adds authenticity to your table. We cover its capacity, design, and best dishes to serve in it.</p>
-            <a href="https://amzn.to/44159yX" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+        <!-- 2. Zap Impex Indian Serving Bowl -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>Zap Impex Indian Serving Bowl – Hammered Copper/Stainless Karahi</h3>
+            <p>A versatile hammered copper and stainless steel karahi, ideal for serving dal, saag, biryani, and more with authentic presentation.</p>
+            <p><a href="https://amzn.to/44159yX" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
 
-        <!-- Post Card #3 -->
-        <div class="post-card" id="post3">
-          <div class="post-image">
-            <img src="images/cookware-post-3.jpg" alt="Review: Hawkins Classic 3L Pressure Cooker" />
-          </div>
-          <div class="post-content">
-            <h3>Review: Hawkins Classic 3 Litre Pressure Cooker</h3>
-            <p>We test the Hawkins Classic 3L pressure cooker with Punjabi recipes like dal and rajma. Discover cooking times, safety features, and why it’s a bestseller.</p>
-            <a href="https://amzn.to/3FD6fYA" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+        <!-- 3. Hawkins Classic Pressure Cooker -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>Hawkins Classic 3 Litre Inner Lid Aluminium Pressure Cooker</h3>
+            <p>Amazon’s bestselling 3L Hawkins pressure cooker is a staple for cooking Punjabi staples—dal, rajma, chole—quickly and efficiently.</p>
+            <p><a href="https://amzn.to/3FD6fYA" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
 
-        <!-- Post Card #4 -->
-        <div class="post-card" id="post4">
-          <div class="post-image">
-            <img src="images/cookware-post-4.jpg" alt="Guide: KSJONE Designer Spice Container Masala Dabba" />
-          </div>
-          <div class="post-content">
-            <h3>Guide: KSJONE Designer Spice Container Masala Dabba</h3>
-            <p>See why this 7-compartment masala dabba is perfect for organizing your essential Punjabi spices. We evaluate build quality, design, and ease of refilling.</p>
-            <a href="https://amzn.to/4kWYUCd" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+        <!-- 4. KSJONE Designer Spice Container -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>KSJONE Designer Spice Container Masala Dabba with 7 Compartments</h3>
+            <p>Keep your essential Punjabi spices organized in this elegant stainless steel masala dabba with seven removable compartments and a tight-seal lid.</p>
+            <p><a href="https://amzn.to/4kWYUCd" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
       </div>
@@ -414,6 +388,7 @@
   <!-- Footer -->
   <footer>
     <div class="container footer-container">
+      <!-- Column: Quick Links -->
       <div class="footer-column">
         <h4>Quick Links</h4>
         <ul>
@@ -423,10 +398,14 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Column: About Us -->
       <div class="footer-column">
         <h4>About Us</h4>
         <p>PunjabiPride.ca is dedicated to showcasing Punjabi culinary traditions through trusted book and cookware recommendations. Purchase via our affiliate links to support our mission.</p>
       </div>
+
+      <!-- Column: Social Media -->
       <div class="footer-column">
         <h4>Follow Us</h4>
         <ul>

@@ -7,22 +7,22 @@
 
   <!-- SEO Meta Tags -->
   <title>Cookbook Blog – PunjabiPride.ca</title>
-  <meta name="description" content="Explore in‐depth reviews, recipes, and recommendations in our Cookbook Blog. Discover the best Punjabi cookbooks, tips for mastering traditional dishes, and culinary inspiration." />
-  <meta name="keywords" content="Punjabi cookbook blog, cookbook reviews, Punjabi recipes, cookbook recommendations, Punjabi cuisine, Punjabi cookbooks, Barbara Riddle, Rachael Rayner, Simran Bajwa, Monisha Bharadwaj" />
+  <meta name="description" content="PunjabiPride.ca Cookbook Blog – Explore top Punjabi cookbooks handpicked for authenticity, quality, and flavor. Purchase via affiliate links." />
+  <meta name="keywords" content="Punjabi cookbooks, Punjabi recipes, Punjabi Style Recipes, The Punjabi Cookbook, Simran Bajwa, Monisha Bharadwaj" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="Cookbook Blog – PunjabiPride.ca" />
-  <meta property="og:description" content="Explore in‐depth reviews, recipes, and recommendations in our Cookbook Blog. Discover the best Punjabi cookbooks, tips for mastering traditional dishes, and culinary inspiration." />
-  <meta property="og:image" content="https://punjabipride.ca/images/og-cookbook.jpg" />
+  <meta property="og:description" content="Explore top Punjabi cookbooks handpicked for authenticity, quality, and flavor. Purchase via our affiliate links." />
+  <meta property="og:image" content="https://punjabipride.ca/images/og-image.jpg" />
   <meta property="og:url" content="https://punjabipride.ca/cookbook-blog.html" />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Cookbook Blog – PunjabiPride.ca" />
-  <meta name="twitter:description" content="Explore in‐depth reviews, recipes, and recommendations in our Cookbook Blog. Discover the best Punjabi cookbooks, tips for mastering traditional dishes, and culinary inspiration." />
-  <meta name="twitter:image" content="https://punjabipride.ca/images/og-cookbook.jpg" />
+  <meta name="twitter:description" content="Explore top Punjabi cookbooks handpicked for authenticity, quality, and flavor. Purchase via our affiliate links." />
+  <meta name="twitter:image" content="https://punjabipride.ca/images/og-image.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -31,7 +31,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Inline CSS (Same as index.html for consistency) -->
+  <!-- JSON-LD for WebPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cookbook Blog – PunjabiPride.ca",
+    "url": "https://punjabipride.ca/cookbook-blog.html",
+    "description": "Explore top Punjabi cookbooks handpicked for authenticity, quality, and flavor. Purchase via affiliate links."
+  }
+  </script>
+
+  <!-- Inline CSS for Background & Layout -->
   <style>
     :root {
       --brand-orange: #ff9933;
@@ -39,7 +50,6 @@
       --brand-white: #ffffff;
       --text-dark: #1a1a1a;
       --text-light: #fafafa;
-      --overlay-bg: rgba(0, 0, 0, 0.5);
       --max-width: 1200px;
       --transition-speed: 0.3s;
     }
@@ -56,9 +66,9 @@
     }
 
     body {
-      position: relative;
       margin: 0;
-      background: url('background.jpg') no-repeat center center fixed;
+      /* Full-page background image: newback.jpg */
+      background: url('newback.jpg') no-repeat center center fixed;
       background-size: cover;
       color: var(--text-dark);
       line-height: 1.6;
@@ -80,11 +90,12 @@
       display: block;
     }
 
+    /* Fixed Header */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--overlay-bg);
+      background-color: rgba(0, 0, 0, 0.5); /* slight dark bar for readability */
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
@@ -123,14 +134,7 @@
       color: var(--brand-orange);
     }
 
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: var(--overlay-bg);
-      z-index: 0;
-    }
-
+    /* Hero Section */
     .hero {
       position: relative;
       height: 60vh;
@@ -138,8 +142,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding-top: 70px;
-      z-index: 1;
+      padding-top: 70px; /* account for fixed header */
     }
 
     .hero-content {
@@ -148,6 +151,7 @@
       padding: 2rem;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -159,21 +163,23 @@
 
     .hero p {
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: var(--text-dark);
     }
 
+    /* Main Content */
     main {
-      position: relative;
-      background-color: rgba(255, 255, 255, 0.95);
       padding: 4rem 1rem;
-      margin-top: -60vh;
+      margin-top: 0; /* no overlap – hero is shorter */
       z-index: 1;
     }
 
     .section {
       max-width: var(--max-width);
       margin: 0 auto 4rem auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 8px;
     }
 
     .section-heading {
@@ -192,68 +198,59 @@
       margin: 0 auto 2rem auto;
     }
 
-    .post-list {
-      display: flex;
-      flex-direction: column;
+    .product-grid {
+      display: grid;
       gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .post-card {
+    .product-card {
       background-color: var(--brand-white);
       border: 1px solid #e0e0e0;
       border-radius: 6px;
       overflow: hidden;
-      display: flex;
-      flex-wrap: wrap;
       transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
     }
 
-    .post-card:hover {
+    .product-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     }
 
-    .post-image {
-      flex: 1 1 280px;
-      max-height: 200px;
-      overflow: hidden;
-    }
-
-    .post-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .post-content {
-      flex: 2 1 380px;
+    .product-card-content {
       padding: 1rem;
     }
 
-    .post-content h3 {
-      font-size: 1.5rem;
+    .product-card-content h3 {
+      font-size: 1.25rem;
       margin-bottom: 0.5rem;
       color: var(--text-dark);
       font-weight: 600;
     }
 
-    .post-content p {
+    .product-card-content p {
       font-size: 0.95rem;
       margin-bottom: 1rem;
       color: #666666;
-      line-height: 1.5;
+      line-height: 1.4;
     }
 
-    .read-more {
-      font-weight: 500;
-      color: var(--brand-orange);
-      transition: color var(--transition-speed);
+    .buy-button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: var(--brand-orange);
+      color: var(--brand-white);
+      border-radius: 4px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color var(--transition-speed);
     }
 
-    .read-more:hover {
-      color: #e68a00;
+    .buy-button:hover {
+      background-color: #e68a00;
     }
 
+    /* Footer */
     footer {
       background-color: var(--brand-blue);
       color: var(--brand-white);
@@ -301,29 +298,25 @@
       color: #d0d0d0;
     }
 
+    /* Responsive Typography */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
       }
       .hero p {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       .section-heading {
         font-size: 1.75rem;
       }
-      .post-card {
-        flex-direction: column;
-      }
-      .post-image,
-      .post-content {
-        flex: 1 1 100%;
+      .section {
+        margin: 0 auto 2rem auto;
+        padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="overlay"></div>
-
   <!-- Header & Navigation -->
   <header>
     <div class="container">
@@ -343,68 +336,53 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Cookbook Blog</h1>
-      <p>In‐depth reviews, recipes, and recommendations for the best Punjabi cookbooks on the market. Learn how to master traditional dishes and explore authentic culinary guides.</p>
+      <p>Discover the top Punjabi cookbooks handpicked for authenticity, flavor, and cultural heritage.</p>
     </div>
   </section>
 
-  <!-- Main Content -->
+  <!-- Main Content: Cookbook List -->
   <main>
-    <!-- Introduction -->
-    <section class="section">
-      <h2 class="section-heading">Welcome to Our Cookbook Blog</h2>
-      <p class="intro-text">
-        Discover thorough reviews of top Punjabi cookbooks, from “Punjabi Style Recipes” to “The Indian Cooking Course.” Whether you’re a beginner or a seasoned home chef, find expert insights, step‐by‐step recipe highlights, and recommendations to elevate your Punjabi cooking.
-      </p>
-    </section>
-
-    <!-- List of Cookbook Blog Posts -->
-    <section class="section">
-      <div class="post-list">
-        <!-- Post Card #1 -->
-        <div class="post-card" id="post1">
-          <div class="post-image">
-            <img src="images/cookbook-post-1.jpg" alt="Review: Punjabi Style Recipes Cover" />
-          </div>
-          <div class="post-content">
-            <h3>Review: “Punjabi Style Recipes” by Barbara Riddle</h3>
-            <p>We explore why “Punjabi Style Recipes” is a standout for home cooks craving authentic Northern Indian dishes. Detailed photos, easy instructions, and traditional favorites like Dal Makhani and Aloo Paratha.</p>
-            <a href="https://amzn.to/4kVxVaa" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+    <section class="section" id="cookbooks">
+      <h2 class="section-heading">Top Punjabi Cookbooks</h2>
+      <p class="intro-text">Explore our curated collection of must-have Punjabi cookbooks. Click any “Buy on Amazon” button to purchase through our affiliate links.</p>
+      <div class="product-grid">
+        <!-- 1. Punjabi Style Recipes -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>Punjabi Style Recipes: A Complete Cookbook of Northern India Dish Ideas!</h3>
+            <p><strong>Author:</strong> Barbara Riddle</p>
+            <p>This highly rated cookbook delivers authentic Northern Indian recipes, from Butter Chicken to Aloo Paratha, complete with step-by-step photos.</p>
+            <p><a href="https://amzn.to/4kVxVaa" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
 
-        <!-- Post Card #2 -->
-        <div class="post-card" id="post2">
-          <div class="post-image">
-            <img src="images/cookbook-post-2.jpg" alt="Guide: The Punjabi Cookbook by Rachael Rayner" />
-          </div>
-          <div class="post-content">
-            <h3>Guide: “The Punjabi Cookbook” by Rachael Rayner</h3>
-            <p>This post dives into “The Punjabi Cookbook,” featuring over 50 aromatic Punjabi dishes. Learn about must-try recipes like Chole and Rajma, plus tips for using local ingredients in Canadian kitchens.</p>
-            <a href="https://amzn.to/3SySxsz" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+        <!-- 2. The Punjabi Cookbook -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>The Punjabi Cookbook: 50+ Spicy and Aromatic Punjabi Recipes</h3>
+            <p><strong>Author:</strong> Rachael Rayner</p>
+            <p>Featuring over 50 signature Punjabi dishes, this book is perfect for home chefs wanting to master Dal Tadka, Rajma, and Chole.</p>
+            <p><a href="https://amzn.to/3SySxsz" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
 
-        <!-- Post Card #3 -->
-        <div class="post-card" id="post3">
-          <div class="post-image">
-            <img src="images/cookbook-post-3.jpg" alt="Feature: Simran Bajwa’s Punjabi Cookbook" />
-          </div>
-          <div class="post-content">
-            <h3>Feature: “Punjabi Cookbook – A Culinary Journey” by Simran Bajwa</h3>
-            <p>Discover why Simran Bajwa’s “Punjabi Cookbook” stands out with its visual style and family heirloom recipes. From Sarson da Saag to Punjabi Sweets, get authentic flavors straight from Punjab’s heart.</p>
-            <a href="https://amzn.to/4mMh2Af" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+        <!-- 3. Punjabi Cookbook – Simran Bajwa -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>Punjabi Cookbook – A Culinary Journey through the Heart of Punjabi</h3>
+            <p><strong>Author:</strong> Simran Bajwa</p>
+            <p>A beautifully illustrated cookbook overflowing with authentic Punjabi family recipes that bring traditional flavors to life.</p>
+            <p><a href="https://amzn.to/4mMh2Af" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
 
-        <!-- Post Card #4 -->
-        <div class="post-card" id="post4">
-          <div class="post-image">
-            <img src="images/cookbook-post-4.jpg" alt="Overview: The Indian Cooking Course by Monisha Bharadwaj" />
-          </div>
-          <div class="post-content">
-            <h3>Overview: “The Indian Cooking Course” by Monisha Bharadwaj</h3>
-            <p>More than a cookbook, this masterclass takes you through essential Indian cooking techniques, including Punjabi favorites, tandoori methods, and kitchen fundamentals. Perfect for ambitious home chefs.</p>
-            <a href="https://amzn.to/4dOgHJ7" target="_blank" rel="noopener" class="read-more">Buy on Amazon &rarr;</a>
+        <!-- 4. The Indian Cooking Course -->
+        <div class="product-card">
+          <div class="product-card-content">
+            <h3>The Indian Cooking Course: Techniques – Masterclasses</h3>
+            <p><strong>Author:</strong> Monisha Bharadwaj</p>
+            <p>More than just Punjabi recipes, this book covers essential techniques including Tandoori and Punjabi dishes—perfect for serious home chefs.</p>
+            <p><a href="https://amzn.to/4dOgHJ7" target="_blank" rel="noopener" class="buy-button">▶️ Buy on Amazon</a></p>
           </div>
         </div>
       </div>
@@ -414,6 +392,7 @@
   <!-- Footer -->
   <footer>
     <div class="container footer-container">
+      <!-- Column: Quick Links -->
       <div class="footer-column">
         <h4>Quick Links</h4>
         <ul>
@@ -423,10 +402,14 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
+
+      <!-- Column: About Us -->
       <div class="footer-column">
         <h4>About Us</h4>
         <p>PunjabiPride.ca is dedicated to showcasing Punjabi culinary traditions through trusted book and cookware recommendations. Purchase via our affiliate links to support our mission.</p>
       </div>
+
+      <!-- Column: Social Media -->
       <div class="footer-column">
         <h4>Follow Us</h4>
         <ul>

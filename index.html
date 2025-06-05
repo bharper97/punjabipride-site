@@ -55,7 +55,6 @@
       --brand-white: #ffffff;
       --text-dark: #1a1a1a;
       --text-light: #fafafa;
-      --overlay-bg: rgba(0, 0, 0, 0.5);
       --max-width: 1200px;
       --transition-speed: 0.3s;
     }
@@ -74,8 +73,8 @@
     }
 
     body {
-      position: relative;
       margin: 0;
+      /* Use newback.jpg as the only background—no overlay or extra layers */
       background: url('newback.jpg') no-repeat center center fixed;
       background-size: cover;
       color: var(--text-dark);
@@ -103,7 +102,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--overlay-bg);
+      background-color: rgba(0, 0, 0, 0.5); /* a subtle dark bar so links stand out */
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
@@ -142,17 +141,6 @@
       color: var(--brand-orange);
     }
 
-    /* Overlay over background to improve readability */
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var(--overlay-bg);
-      z-index: 0;
-    }
-
     /* Hero Section */
     .hero {
       position: relative;
@@ -162,7 +150,6 @@
       justify-content: center;
       text-align: center;
       padding-top: 70px; /* account for fixed header */
-      z-index: 1;
     }
 
     .hero-content {
@@ -171,6 +158,7 @@
       padding: 2rem;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -224,15 +212,17 @@
     /* Main Content */
     main {
       position: relative;
-      background-color: rgba(255, 255, 255, 0.95);
       padding: 4rem 1rem;
-      margin-top: -100vh; /* Overlap hero */
+      /* Notice: no background-color or margin-top. This lets the background image show through behind all sections */
       z-index: 1;
     }
 
     .section {
       max-width: var(--max-width);
       margin: 0 auto 4rem auto;
+      background: rgba(255, 255, 255, 0.95); /* subtle white “card” only around each section’s text for readability */
+      padding: 2rem;
+      border-radius: 8px;
     }
 
     .section-heading {
@@ -363,13 +353,14 @@
       .section-heading {
         font-size: 1.75rem;
       }
+      .section {
+        margin: 0 auto 2rem auto;
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Background Overlay -->
-  <div class="overlay"></div>
-
   <!-- Header & Navigation -->
   <header>
     <div class="container">

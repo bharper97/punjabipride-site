@@ -7,22 +7,22 @@
 
   <!-- SEO Meta Tags -->
   <title>Contact Us – PunjabiPride.ca</title>
-  <meta name="description" content="Get in touch with PunjabiPride.ca. Have questions about Punjabi cookbooks or cookware? Send us a message through our contact form!" />
-  <meta name="keywords" content="Contact PunjabiPride, Punjabi cookbook questions, Punjabi cookware questions, Punjabi cooking blog contact" />
+  <meta name="description" content="Contact PunjabiPride.ca for questions, feedback, or partnership inquiries. Reach out via our simple contact form." />
+  <meta name="keywords" content="PunjabiPride, contact, feedback, inquiries, Punjabi cooking" />
   <meta name="robots" content="index, follow" />
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="Contact Us – PunjabiPride.ca" />
-  <meta property="og:description" content="Get in touch with PunjabiPride.ca. Have questions about Punjabi cookbooks or cookware? Send us a message through our contact form!" />
-  <meta property="og:image" content="https://punjabipride.ca/images/og-contact.jpg" />
+  <meta property="og:description" content="Contact PunjabiPride.ca for questions, feedback, or partnership inquiries. Reach out via our simple contact form." />
+  <meta property="og:image" content="https://punjabipride.ca/images/og-image.jpg" />
   <meta property="og:url" content="https://punjabipride.ca/contact.html" />
   <meta property="og:type" content="website" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact Us – PunjabiPride.ca" />
-  <meta name="twitter:description" content="Get in touch with PunjabiPride.ca. Have questions about Punjabi cookbooks or cookware? Send us a message through our contact form!" />
-  <meta name="twitter:image" content="https://punjabipride.ca/images/og-contact.jpg" />
+  <meta name="twitter:description" content="Contact PunjabiPride.ca for questions, feedback, or partnership inquiries. Reach out via our simple contact form." />
+  <meta name="twitter:image" content="https://punjabipride.ca/images/og-image.jpg" />
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -31,7 +31,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Inline CSS (Consistent with other pages) -->
+  <!-- JSON-LD for WebPage Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Us – PunjabiPride.ca",
+    "url": "https://punjabipride.ca/contact.html",
+    "description": "Contact PunjabiPride.ca for questions, feedback, or partnership inquiries. Reach out via our simple contact form."
+  }
+  </script>
+
+  <!-- Inline CSS for Background & Layout -->
   <style>
     :root {
       --brand-orange: #ff9933;
@@ -39,7 +50,6 @@
       --brand-white: #ffffff;
       --text-dark: #1a1a1a;
       --text-light: #fafafa;
-      --overlay-bg: rgba(0, 0, 0, 0.5);
       --max-width: 1200px;
       --transition-speed: 0.3s;
     }
@@ -56,9 +66,9 @@
     }
 
     body {
-      position: relative;
       margin: 0;
-      background: url('background.jpg') no-repeat center center fixed;
+      /* Full-page background image: newback.jpg */
+      background: url('newback.jpg') no-repeat center center fixed;
       background-size: cover;
       color: var(--text-dark);
       line-height: 1.6;
@@ -80,12 +90,12 @@
       display: block;
     }
 
-    /* Header & Navigation */
+    /* Fixed Header */
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--overlay-bg);
+      background-color: rgba(0, 0, 0, 0.5); /* slight dark bar for readability */
       z-index: 999;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
@@ -124,15 +134,6 @@
       color: var(--brand-orange);
     }
 
-    /* Overlay over background */
-    .overlay {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background-color: var(--overlay-bg);
-      z-index: 0;
-    }
-
     /* Hero Section */
     .hero {
       position: relative;
@@ -142,7 +143,6 @@
       justify-content: center;
       text-align: center;
       padding-top: 70px; /* account for fixed header */
-      z-index: 1;
     }
 
     .hero-content {
@@ -151,6 +151,7 @@
       padding: 2rem;
       background-color: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
+      z-index: 1;
     }
 
     .hero h1 {
@@ -162,22 +163,23 @@
 
     .hero p {
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       color: var(--text-dark);
     }
 
     /* Main Content */
     main {
-      position: relative;
-      background-color: rgba(255, 255, 255, 0.95);
       padding: 4rem 1rem;
-      margin-top: -60vh; /* Overlap hero */
+      margin-top: 0; /* no overlap – hero is shorter */
       z-index: 1;
     }
 
     .section {
       max-width: var(--max-width);
       margin: 0 auto 4rem auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 8px;
     }
 
     .section-heading {
@@ -196,58 +198,52 @@
       margin: 0 auto 2rem auto;
     }
 
-    /* Contact Form */
+    /* Form Styles */
     .contact-form {
       max-width: 600px;
       margin: 0 auto;
-      background-color: var(--brand-white);
-      padding: 2rem;
-      border: 1px solid #e0e0e0;
-      border-radius: 6px;
     }
 
-    .contact-form h2 {
-      text-align: center;
+    .form-group {
       margin-bottom: 1.5rem;
-      color: var(--brand-blue);
-      font-weight: 600;
     }
 
-    .contact-form p {
-      margin-bottom: 1rem;
-      color: #555555;
-      font-size: 1rem;
-    }
-
-    .contact-form label {
+    .form-group label {
       display: block;
       font-weight: 500;
       margin-bottom: 0.5rem;
       color: var(--text-dark);
     }
 
-    .contact-form input {
+    .form-group input,
+    .form-group textarea {
       width: 100%;
       padding: 0.75rem;
-      margin-bottom: 1rem;
       border: 1px solid #cccccc;
       border-radius: 4px;
       font-size: 1rem;
+      font-family: 'Poppins', sans-serif;
+      resize: vertical;
     }
 
-    .contact-form button {
+    .form-group textarea {
+      height: 150px;
+    }
+
+    .submit-button {
       display: inline-block;
       padding: 0.75rem 1.5rem;
       background-color: var(--brand-orange);
       color: var(--brand-white);
-      font-weight: 600;
       border: none;
       border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
       cursor: pointer;
       transition: background-color var(--transition-speed);
     }
 
-    .contact-form button:hover {
+    .submit-button:hover {
       background-color: #e68a00;
     }
 
@@ -299,23 +295,25 @@
       color: #d0d0d0;
     }
 
+    /* Responsive Typography */
     @media (max-width: 768px) {
       .hero h1 {
         font-size: 2rem;
       }
       .hero p {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       .section-heading {
         font-size: 1.75rem;
+      }
+      .section {
+        margin: 0 auto 2rem auto;
+        padding: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Background Overlay -->
-  <div class="overlay"></div>
-
   <!-- Header & Navigation -->
   <header>
     <div class="container">
@@ -335,35 +333,37 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Contact Us</h1>
-      <p>Have questions or feedback? Fill out the form below and we’ll get back to you shortly.</p>
+      <p>We’d love to hear from you! Send us your questions, feedback, or partnership inquiries.</p>
     </div>
   </section>
 
-  <!-- Main Content -->
+  <!-- Main Content: Contact Form -->
   <main>
-    <section class="section">
+    <section class="section" id="contact-section">
+      <h2 class="section-heading">Get in Touch</h2>
+      <p class="intro-text">Use the form below to send us a message. We aim to respond within 48 hours.</p>
       <div class="contact-form">
-        <h2>Get in Touch</h2>
         <!-- Netlify Form -->
-        <form name="contact" netlify>
-          <p>
-            <label>Name<br />
-              <input type="text" name="name" required />
-            </label>
-          </p>
-          <p>
-            <label>Email<br />
-              <input type="email" name="email" required />
-            </label>
-          </p>
-          <p>
-            <label>Message<br />
-              <textarea name="message" rows="5" required style="width: 100%; padding: 0.75rem; border: 1px solid #cccccc; border-radius: 4px; font-size: 1rem;"></textarea>
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send Message</button>
-          </p>
+        <form name="contact" method="POST" data-netlify="true">
+          <!-- Required for Netlify form handling -->
+          <input type="hidden" name="form-name" value="contact" />
+
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
+          </div>
+
+          <button type="submit" class="submit-button">Send Message</button>
         </form>
       </div>
     </section>
